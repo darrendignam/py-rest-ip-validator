@@ -30,11 +30,11 @@ from flask import jsonify, render_template, request, redirect, url_for
 from flask_negotiate import produces
 from werkzeug.exceptions import BadRequest, Forbidden, NotFound, Unauthorized, InternalServerError
 
-from ip_validation.infopacks.mets import MetsValidator
+from eark_validator.infopacks.mets import MetsValidator
 
 from ip_validation.webapp import APP, __version__
-from ip_validation.infopacks.rules import ValidationProfile
-import ip_validation.infopacks.information_package as IP
+from eark_validator.infopacks.rules import ValidationProfile
+import eark_validator.infopacks.information_package as IP
 import ip_validation.utils as UTILS
 
 ROUTES = True

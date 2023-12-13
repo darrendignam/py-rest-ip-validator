@@ -1,2 +1,5 @@
 lxml
 importlib_resources
+Werkzeug==2.3.7
+dicttoxml
+https://github.com/opf-labs/eark-validator-core/releases/download/v0.1.1/eark_validator_core-0.1.1-py3-none-any.whl#0.1.1

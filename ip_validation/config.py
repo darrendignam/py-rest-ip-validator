@@ -53,9 +53,16 @@ class BaseConfig():# pylint: disable-msg=R0903
 class DevConfig(BaseConfig):# pylint: disable-msg=R0903
     """Developer level config, with debug logging and long log format."""
     NAME = 'Development'
+    HOST = HOST    
     DEBUG = True
     TESTING = True
     LOG_FORMAT = '[%(levelname)-8s %(filename)-15s:%(lineno)-5d %(funcName)-30s] %(message)s'
+    LOG_FILE = os.path.join(LOG_ROOT, 'eark-pyip-validation.log')
+    SECRET_KEY = 'a5c020ced05af9ad3aacc6bba41beb5c7b6f750b846dadad'
+    EARKVAL_ROOT = TEMP
+    MAX_CONTENT_LENGTH = 64 * 1024 * 1024
+    UPLOAD_FOLDER = UPLOADS_TEMP
+    ALLOWED_EXTENSIONS = {'zip', 'tar', 'gz', 'gzip'}
 
 class TestConfig(BaseConfig):# pylint: disable-msg=R0903
     """Developer level config, with debug logging and long log format."""

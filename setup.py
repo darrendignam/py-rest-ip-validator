@@ -49,10 +49,21 @@ TEST_DEPS = [
     'flask-debugtoolbar',
 ]
 
+TEST_REQUIRES = [
+    'pre-commit',
+    'pytest',
+    'pylint',
+    'pytest-cov',
+    'flask == 1.1.2',
+    'Flask-Negotiate == 0.1.0',
+    'flask-debugtoolbar',
+]
+
 EXTRAS = {
     'flask': FLASK_REQUIRES,
     'testing': TEST_DEPS,
     'setup': SETUP_REQUIRES,
+    'test': TEST_REQUIRES,
 }
 
 with open('README.md', 'r') as README:
@@ -87,11 +98,6 @@ setup(name='eark-ip-validation',
       extras_require=EXTRAS,
       install_requires=INSTALL_REQUIRES,
       setup_requires=SETUP_REQUIRES,
-<<<<<<< HEAD
-      tests_require=TEST_DEPS,
-=======
       tests_require=TEST_REQUIRES,
-      extras_require=EXTRAS,
->>>>>>> master
       test_suite='tests',
      )

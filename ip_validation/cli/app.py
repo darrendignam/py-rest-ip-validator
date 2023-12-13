@@ -32,7 +32,7 @@ import os.path
 import sys
 
 import ip_validation.cli.testcases as TC
-import ip_validation.infopacks.information_package as IP
+import eark_validator.infopacks.information_package as IP
 
 __version__ = "0.1.0"
 
